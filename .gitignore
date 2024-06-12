@@ -1,0 +1,18 @@
+# Temp files
+*~
+
+# Compile results
+*pyc
+
+__pycache__/
+*.py[cod]
+
+migrations/
+
+# Random files
+.DS_Store
+.idea
+.metals/
+.bloop/
+.vscode
+.bsp
