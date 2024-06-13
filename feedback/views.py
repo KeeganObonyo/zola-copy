@@ -20,24 +20,25 @@ class AddFeedBackAPIView(APIView):
 
     def post(self, request, format=None):
         try:
-            company  = Customer.objects.get(username=request.user)
-            FeedaBack.objects.create(
+            company  = Customer.objects.get(username=request.data['username'])
+            FeedBack.objects.create(
                 author_name=request.data['author_name'],
                 callback=request.data['callback'],
                 text_info=request.data['text_info'],
                 rating=request.data['rating'],
-                customer=company
+                employee=request.data['employee'],
+                company=company
             )
+            return Response(data="Feedback added successfully", status=status.HTTP_200_OK)
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
-
 
 class FeedBackListView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = FeedBackSerializer
 
     def get_queryset(self, *args, **kwargs):
-        if Customer.objects.get(username=request.user).subscription.isactive:
+        if Customer.objects.get(username=self.request.user).subscription.isactive:
             queryset_list = FeedBack.objects.filter(
                 company__username=self.request.user
                 )

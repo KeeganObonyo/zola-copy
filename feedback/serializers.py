@@ -8,10 +8,10 @@ class FeedBackSerializer(ModelSerializer):
     class Meta:
         model = FeedBack
         fields = [
-            'author_name'
-            'callback'
-            'text_info'
-            'rating'
-            'insertion_time'
+            'author_name',
+            'callback',
+            'text_info',
+            'rating',
+            'insertion_time',
             'company'
         ]

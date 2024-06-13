@@ -66,7 +66,7 @@ class CustomerCreateSerializer(ModelSerializer):
         )
         customer_obj.set_password(password)
         customer_obj.save()
-        Subscription.objects.create(false,customer_obj)
+        Subscription.objects.create(isactive = False, company = customer_obj)
         return validated_data
 
 class EmployeeSerializer(serializers.ModelSerializer):
