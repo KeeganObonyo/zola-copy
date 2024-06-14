@@ -16,3 +16,6 @@ migrations/
 .bloop/
 .vscode
 .bsp
+
+# Env files
+.venv
