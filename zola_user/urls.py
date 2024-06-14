@@ -25,6 +25,7 @@ from feedback.views import (
 
 urlpatterns = [
     path('api/zola/register/', CustomerCreateAPIView.as_view(), name='register_new_customer'),
+    path('api/zola/customer/list', CustomerListView.as_view(), name='list_customer'),
     path('api/zola/get_token/', TokenObtainPairView.as_view(), name='obtain_token'),
     path('api/zola/refresh_token/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/zola/profile', CustomerProfileView.as_view(), name='customer_profile'),

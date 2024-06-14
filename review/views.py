@@ -16,7 +16,7 @@ class RetrieveGooglePLaceId:
         place_id_url   = st.GOOGLE_PLACES_API_URL
         google_api_key = st.GOOGLE_PLACES_API_KEY
         try:
-            response = requests.get(place_id_url + "?fields=&input=" + place + "&inputtype=textquery&key=" + google_api_key)
+            response = requests.get(place_id_url + "?fields=&input=" + company_name + "&inputtype=textquery&key=" + google_api_key)
             data = response.json()
             place_id  = data["candidates"][0]["place_id"]
             return place_id
