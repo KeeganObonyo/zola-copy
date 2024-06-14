@@ -102,7 +102,6 @@ class CustomerTest(APITestCase):
             HTTP_AUTHORIZATION=token_retrieve(self))
         response = self.client.get(url, format='json')
         self.assertEqual(response.data, expected_data)
-
         self.assertEqual(response.status_code, 200)
        
     def test_AddEmployees(self):
