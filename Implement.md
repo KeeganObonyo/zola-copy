@@ -98,62 +98,44 @@ request type: GET
 
 response: status 200
 
-[
-    {
-        "author_name": "Adan Ahmed",
-        "author_url": "https://www.google.com/maps/contrib/104957897105311865387/reviews",
-        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUC6abtqH2lMHnRWgbSCbuIjqxmAgtpMJSz_IJFvkcYi3c7YMsl=s128-c0x00000000-cc-rp-mo-ba3",
-        "rating": 5,
-        "relative_time_description": "a week ago",
-        "text": "",
-        "time": 1717444149,
-        "translated": false
-    },
-    {
-        "author_name": "Adan Abdi (Adesh)",
-        "author_url": "https://www.google.com/maps/contrib/115457450912541221206/reviews",
-        "language": "en",
-        "original_language": "en",
-        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWSozf3QCjz2I2RemxmuZjOKo4o3XR1FrDoRmIqSSigmUcBsaTm=s128-c0x00000000-cc-rp-mo-ba4",
-        "rating": 5,
-        "relative_time_description": "2 weeks ago",
-        "text": "I love the food here, my take was pilau goes for Ksh 500. Price was fair",
-        "time": 1716808545,
-        "translated": false
-    },
-    {
-        "author_name": "Karume Robert",
-        "author_url": "https://www.google.com/maps/contrib/106540546263532359878/reviews",
-        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUcqBi1n2WCYbzjIY15BccYgobuiw6MWUpS4xUEEWxngCB4bSY=s128-c0x00000000-cc-rp-mo-ba3",
-        "rating": 5,
-        "relative_time_description": "a month ago",
-        "text": "",
-        "time": 1714732263,
-        "translated": false
-    },
-    {
-        "author_name": "Abdinasir Haji",
-        "author_url": "https://www.google.com/maps/contrib/102706284029389220219/reviews",
-        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKhZZCp4eapbQphlOAxyNRCXyD3R2qLaSzCAc0CsN21AAmrgns=s128-c0x00000000-cc-rp-mo",
-        "rating": 5,
-        "relative_time_description": "a month ago",
-        "text": "",
-        "time": 1714211277,
-        "translated": false
-    },
-    {
-        "author_name": "Abdinasir Mohamed 4379",
-        "author_url": "https://www.google.com/maps/contrib/110104440451885385948/reviews",
-        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWwiHNddP36Pff7VFc6wRqVWf3C0VRjvS-3wG_tf3qY1DtrZLVM=s128-c0x00000000-cc-rp-mo",
-        "rating": 5,
-        "relative_time_description": "a month ago",
-        "text": "",
-        "time": 1713128849,
-        "translated": false
-    }
-]
+{
+    "rating": 4.3,
+    "reviews": 6094,
+    "reviews_list": [
+        {
+            "author_name": "Esther Wamugunda",
+            "text": "Kilimanjaro Restaurant is a bustling eatery, particularly during lunch hours, with plenty of attentive wait staff available to cater to the crowd. The menu offers Swahili-inspired dishes, including the biryani. However, I found the chicken in the biryani to be lacking freshness, which was disappointing.\n\nThe restaurant's flavors have undergone changes over time, with the once bold and vibrant tastes becoming less pronounced. While the bathrooms are clean, it's worth noting that the ladies' and gents' facilities are located separately. The portion sizes at Kilimanjaro are quite generous, often too much for a single person to consume, so sharing a dish is recommended.\n\nKilimanjaro Restaurant provides fast service, and the wait staff are helpful and attentive. They have an online ordering system in place, making it convenient for customers to place their orders by scanning the provided QR code.",
+            "rating": 4,
+            "date": "04/16/2024 17:30:30"
+        },
+        {
+            "author_name": "Lawrence Raul",
+            "text": "Had a dinner meeting at this place, and we found it amazing. Top-notch services from the waiter who served us, he was readily available for us, and he recommended the plater to us, which was good, and portion was large, but I felt it could have been better, I loved the arosto and guacamole, as it was nicely done. The passion was great. I couldn't get enough of it.  The outside setting was great as the ambiance was cool. Would recommend groups or couples.  The restaurant is Halal.",
+            "rating": 4,
+            "date": "04/05/2024 20:53:59"
+        },
+        {
+            "author_name": "Gertrude Auma",
+            "text": "Good food and service. Got one of their platters for a group of 6. Also got a cake and they did sing happy birthday. Overall nice place.",
+            "rating": 3,
+            "date": "04/07/2024 16:57:05"
+        },
+        {
+            "author_name": "Samin Kashmy",
+            "text": "The goat meat was nicely cooked. However, the overall taste of goat, chicken, pilao were bland for my South asian taste buds! While they provide you with Chilli sauce and ketchup, they should consider expanding to offer black pepper, and salt, catering to South asian people.\n\nWe went there on valentines day; hence, it was crazily crowded. However, we could manage a seat without prior reservation.\n\nThe server also didn't bring our kachumbari, which was with the platter. Probably they're ran out of it!",
+            "rating": 4,
+            "date": "02/16/2024 13:35:32"
+        },
+        {
+            "author_name": "Rennis Napoleon",
+            "text": "When you are in Nairobi town and you want to grab something to eat this is a nice place to go\nFair prices\nFood 7/10",
+            "rating": 3,
+            "date": "05/20/2024 02:55:31"
+        }
+    ]
+}
 
-You don't have to consume the extra fields but I figure they are a nice to have.
+It additionally contains info like total no of reviews and average rating.
 
 6. Add feedback.
 The feedback view doesn't require authentication as any one should be able to make a feedback. But if the account is innactive this featureis diabled.
