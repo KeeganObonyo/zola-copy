@@ -1,5 +1,4 @@
 import requests
-import json
 
 import zola_api.settings as st
 

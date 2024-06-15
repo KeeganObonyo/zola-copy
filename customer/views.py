@@ -1,20 +1,25 @@
 from django.http import Http404
 
+from itertools import chain
+
 from rest_framework import generics
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.mixins import (
     DestroyModelMixin,
-    UpdateModelMixin)
-from .models import ( Customer, Employee)
+    UpdateModelMixin
+)
+
+from .models import (
+     Customer, 
+     Employee
+)
 from .serializers import (
     CustomerCreateSerializer,
     CustomerSerializer,
     EmployeeSerializer
 )
-
-from itertools import chain
 
 class CustomerCreateAPIView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny,]

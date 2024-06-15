@@ -1,7 +1,10 @@
 from rest_framework import serializers
 from rest_framework.serializers import EmailField, ModelSerializer
 
-from .models import ( Customer, Employee, Subscription )
+from .models import ( 
+    Customer, Employee, 
+    Subscription 
+)
 
 from review.views import RetrieveGooglePLaceId
 

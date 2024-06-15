@@ -1,12 +1,26 @@
-from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.hashers import make_password
 
-from rest_framework.test import APIRequestFactory, APITestCase
+from rest_framework.test import APITestCase
 
-from .views import *
-from .models import *
-from .serializers import *
+from .views import (
+    CustomerCreateAPIView,
+    CustomerListView,
+    CustomerProfileView,
+    AddEmployees,
+    EmployeeDeleteAPIView
+)
+from .models import (
+    Customer,
+    Employee,
+    Subscription
+)
+from .serializers import (
+    CustomerSerializer,
+    CustomerCreateSerializer,
+    EmployeeSerializer,
+    SubscriptionSerializer
+)
 
 from review.views import RetrieveGooglePLaceId
 

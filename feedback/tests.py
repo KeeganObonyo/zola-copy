@@ -1,11 +1,13 @@
-from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.hashers import make_password
 
-from rest_framework.test import APIRequestFactory, APITestCase
+from rest_framework.test import APITestCase
 
-from .views import *
-from .models import *
+from .views import (
+    AddFeedBackAPIView,
+    FeedBackListView
+)
+from .models import FeedBack
 
 from customer.models import (
     Customer,

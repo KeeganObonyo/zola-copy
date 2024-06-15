@@ -1,10 +1,12 @@
-from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.hashers import make_password
 
-from rest_framework.test import APIRequestFactory, APITestCase
+from rest_framework.test import APITestCase
 
-from .views import *
+from .views import (
+    RetrieveGooglePLaceId,
+    RetrieveGoogleReviewsAPIView
+)
 from customer.models import (
     Customer,
     Subscription,
