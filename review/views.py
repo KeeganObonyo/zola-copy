@@ -11,7 +11,9 @@ from django.http import Http404
 from customer.models import Customer
 
 
-class RetrieveGooglePLaceId:
+class RetrieveGooglePLaceId(APIView):
+    permission_classes = [permissions.AllowAny]
+
     def get_place_id(company_name):
         place_id_url   = st.GOOGLE_PLACES_API_URL
         google_api_key = st.GOOGLE_PLACES_API_KEY
@@ -25,6 +27,13 @@ class RetrieveGooglePLaceId:
             return place_id
         except:
             return None
+    
+    def get(self, request, username, format=None):
+        try:
+            place_id  = Customer.objects.get(username=username).place_id
+            return Response(data=place_id, status=status.HTTP_200_OK)
+        except:
+            return Response(data="Account isn't set up properly", status=status.HTTP_400_BAD_REQUEST)
 
 class RetrieveGoogleReviewsAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]

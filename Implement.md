@@ -137,7 +137,17 @@ response: status 200
 
 It additionally contains info like total no of reviews and average rating.
 
-6. Add feedback.
+8. Retrieve place ID.
+
+uri: https://zola.technology/api/place/<str:username>
+
+request type: GET
+
+response: status 200
+
+"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+
+7. Add feedback.
 The feedback view doesn't require authentication as any one should be able to make a feedback. But if the account is innactive this featureis diabled.
 
 uri: https://zola.technology/api/add/feedback
@@ -156,7 +166,7 @@ request body: {
 response: status 200
 "Feedback added successfully"
 
-7. Get feedback list.
+8. Get feedback list.
 
 uri: https://zola.technology/api/list/feedback
 

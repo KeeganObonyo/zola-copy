@@ -81,8 +81,13 @@ class ReviewTest(APITestCase):
         place_id = RetrieveGooglePLaceId.get_place_id("Kilimanjaro Restaurant")
         assert(place_id != None)
 
+        url = reverse("retrieve_place_id", args=['Tester'])
+        response = self.client.get(url, format='json')
+        self.assertEqual(response.status_code, 200)
+        assert(response.data != None)
+
     def test_RetrieveGoogleReviewsAPIView(self):
-        url = reverse("retrirve_reviews")
+        url = reverse("retrieve_reviews")
         self.client.credentials(
             HTTP_AUTHORIZATION=token_retrieve(self))
         response = self.client.get(url, format='json')

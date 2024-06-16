@@ -15,7 +15,8 @@ from customer.views import (
 )
 
 from review.views import (
-    RetrieveGoogleReviewsAPIView
+    RetrieveGoogleReviewsAPIView,
+    RetrieveGooglePLaceId
 )
 
 from feedback.views import (
@@ -31,7 +32,8 @@ urlpatterns = [
     path('api/zola/profile', CustomerProfileView.as_view(), name='customer_profile'),
     path('api/zola/add_employees', AddEmployees.as_view(), name='add_employees'),
     path('api/zola/delete_employee/<str:username>', EmployeeDeleteAPIView.as_view(), name='delete_employees'),
-    path('api/list/review', RetrieveGoogleReviewsAPIView.as_view(), name='retrirve_reviews'),
+    path('api/list/review', RetrieveGoogleReviewsAPIView.as_view(), name='retrieve_reviews'),
+    path('api/place/<str:username>', RetrieveGooglePLaceId.as_view(), name='retrieve_place_id'),
     path('api/add/feedback', AddFeedBackAPIView.as_view(), name='add_feedback'),
     path('api/list/feedback', FeedBackListView.as_view(), name='list_feedback'),
     path('admin/', admin.site.urls),
